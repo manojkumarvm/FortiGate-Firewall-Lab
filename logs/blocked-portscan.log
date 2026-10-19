@@ -1,0 +1,22 @@
+# Sample Forward Traffic Logs - Blocked Port Scan Activity
+# Source: FortiGate Log & Report → Forward Traffic
+# Filter: Action = Deny | Source = Kali IP
+
+Date/Time               | Source IP      | Destination IP | Dest Port | Service | Action | Policy Name      | Notes
+------------------------|----------------|----------------|-----------|---------|--------|------------------|------------------
+2026-10-18 15:10:03     | 192.168.1.50   | 10.0.0.1       | 22        | SSH     | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:03     | 192.168.1.50   | 10.0.0.1       | 23        | TELNET  | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:04     | 192.168.1.50   | 10.0.0.1       | 80        | HTTP    | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:04     | 192.168.1.50   | 10.0.0.1       | 443       | HTTPS   | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:05     | 192.168.1.50   | 10.0.0.1       | 3389      | RDP     | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:05     | 192.168.1.50   | 10.0.0.1       | 445       | SMB     | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:06     | 192.168.1.50   | 10.0.0.1       | 21        | FTP     | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:06     | 192.168.1.50   | 10.0.0.1       | 25        | SMTP    | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:07     | 192.168.1.50   | 10.0.0.1       | 53        | DNS     | Deny   | WAN-to-LAN-Deny  | Port Scan
+2026-10-18 15:10:08     | 192.168.1.50   | 10.0.0.1       | 8080      | HTTP-Alt| Deny   | WAN-to-LAN-Deny  | Port Scan
+
+# Detection Summary:
+# - Source IP 192.168.1.50 (Kali Linux) performed a TCP SYN scan
+# - Multiple rapid connection attempts to common ports were blocked
+# - Policy "WAN-to-LAN-Deny" successfully prevented access
+# - This pattern is a clear indicator of reconnaissance / port scanning activity

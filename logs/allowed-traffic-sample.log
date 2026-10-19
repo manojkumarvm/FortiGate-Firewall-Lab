@@ -1,0 +1,15 @@
+# Sample Forward Traffic Logs - Allowed Connections
+# Source: FortiGate Log & Report → Forward Traffic
+# Filter: Action = Accept
+
+Date/Time               | Source IP    | Destination IP | Service | Action  | Policy Name       | Bytes
+------------------------|--------------|----------------|---------|---------|-------------------|-------
+2026-10-18 14:22:15     | 10.0.0.10    | 8.8.8.8        | DNS     | Accept  | LAN-to-WAN-Allow  | 128
+2026-10-18 14:22:18     | 10.0.0.10    | 142.250.x.x    | HTTPS   | Accept  | LAN-to-WAN-Allow  | 4520
+2026-10-18 14:23:01     | 10.0.0.10    | 104.16.x.x     | HTTPS   | Accept  | LAN-to-WAN-Allow  | 8912
+2026-10-18 14:23:45     | 10.0.0.10    | 1.1.1.1        | DNS     | Accept  | LAN-to-WAN-Allow  | 96
+2026-10-18 14:24:12     | 10.0.0.10    | 192.168.1.1    | PING    | Accept  | LAN-to-WAN-Allow  | 64
+
+# Notes:
+# - All outbound traffic from LAN client (10.0.0.10) was successfully NATed
+# - Policy "LAN-to-WAN-Allow" correctly matched and allowed the sessions
