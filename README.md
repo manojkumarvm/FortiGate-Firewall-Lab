@@ -163,7 +163,8 @@ FortiGate-Firewall-Lab/
 Cybersecurity Enthusiast | SOC Analyst Aspirant  
 
 - GitHub: [github.com/manojkumarvm](https://github.com/manojkumarvm)
-- LinkedIn: [Your LinkedIn]
+- LinkedIn: [www.linkedin.com/in/manoj-kumar-vm
+]
 - Email: manumanoj2422@gmail.com
 
 ---
